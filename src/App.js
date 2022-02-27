@@ -19,23 +19,35 @@
 //   );
 // }
 
-import logo from './dinianjelina.jpg';
-import './App.css';
+// import logo from './dinianjelina.jpg';
+// import './App.css';
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="dinianjelina" />
+//         <p>
+//           Dini Anjelina
+//           <br />
+//           Pengusaha || Web Programmer
+//         </p>
+//         <a className="App-link" href="https://www.instagram.com/dinianjelina_/" target="_blank" rel="noopener noreferrer">
+//           dinianjelina
+//         </a>
+//       </header>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import Komponen from './Materi/Komponen';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="dinianjelina" />
-        <p>
-          Dini Anjelina
-          <br />
-          Pengusaha || Web Programmer
-        </p>
-        <a className="App-link" href="https://www.instagram.com/dinianjelina_/" target="_blank" rel="noopener noreferrer">
-          dinianjelina
-        </a>
-      </header>
+      <Komponen />
     </div>
   );
 }
