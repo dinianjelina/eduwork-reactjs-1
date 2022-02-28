@@ -1,4 +1,4 @@
-import logo from '../../../dinianjelina.jpg';
+import logo from '../../img/dinianjelina.jpg';
 import './style.css';
 
 function Header() {

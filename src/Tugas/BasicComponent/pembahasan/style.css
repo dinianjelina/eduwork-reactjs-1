@@ -4,6 +4,7 @@
 
 .Header-logo {
   height: 40vmin;
+  border-radius: 25%;
 }
 
 .Header-section {
@@ -17,4 +18,49 @@
 
 .Header-link {
   color: #dd2606;
+}
+
+body {
+  line-height: 1;
+  background-image: url(../../img/45degreee_fabric.png);
+}
+
+.container {
+  max-width: 960px;
+  margin: 80px auto;
+  border: 2px solid #600602;
+  box-sizing: border-box;
+  background-color: cornsilk;
+}
+
+.class-component {
+  padding: 20px;
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #fc9d71;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.functional-component {
+  padding: 20px;
+  padding-bottom: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #a1a59f;
+  color: black;
+}
+
+.button {
+  padding-top: 20px;
+  display: inline;
+}
+
+span {
+  font-weight: bold;
 }

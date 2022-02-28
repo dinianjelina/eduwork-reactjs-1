@@ -6,7 +6,7 @@ import Header from './pembahasan/header';
 export default class BasicComponent extends React.Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <Header />
         <FunctionalComponent nama="Dini Anjelina" umur={21} hobi="nonton film" materi="Reactjs dan Nodejs" />
         <ClassComponent />

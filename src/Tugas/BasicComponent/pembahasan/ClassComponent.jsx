@@ -19,15 +19,19 @@ class ClassComponent extends React.Component {
 
   render() {
     return (
-      <div>
-        <p>
-          Enter your rating for my profile, guys.
-          <br />
-          Bad : 1 <br /> Good : 2 <br /> Very Good : 3 <br /> Amazing : 4
-        </p>
-        <button onClick={this.handleMinus}> - </button>
-        <span> {this.state.value} </span>
-        <button onClick={this.handlePlus}> + </button>
+      <div className="class-component">
+        <p>Enter your rating for my profile, guys.</p>
+        <ul>
+          <li>Bad : 1</li>
+          <li>Good : 2</li>
+          <li>Very Good : 3</li>
+          <li>Amazing : 4</li>
+        </ul>
+        <div className="button">
+          <button onClick={this.handleMinus}> - </button>
+          <span> {this.state.value} </span>
+          <button onClick={this.handlePlus}> + </button>
+        </div>
       </div>
     );
   }
