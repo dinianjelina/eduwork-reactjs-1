@@ -42,12 +42,12 @@
 
 // export default App;
 
-import Komponen from './Materi/Komponen';
+import BasicComponent from './Tugas/BasicComponent';
 
 function App() {
   return (
     <div className="App">
-      <Komponen />
+      <BasicComponent />
     </div>
   );
 }
