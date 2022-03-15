@@ -42,12 +42,12 @@
 
 // export default App;
 
-import BasicComponent from './Tugas/BasicComponent';
+import StylingComponent from './Tugas/StylingComponent';
 
 function App() {
   return (
     <div className="App">
-      <BasicComponent />
+      <StylingComponent />
     </div>
   );
 }
