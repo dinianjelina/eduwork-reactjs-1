@@ -42,12 +42,12 @@
 
 // export default App;
 
-import StylingComponent from './Tugas/StylingComponent';
+import FormValidation from './Tugas/FormValidation';
 
 function App() {
   return (
     <div className="App">
-      <StylingComponent />
+      <FormValidation />
     </div>
   );
 }
