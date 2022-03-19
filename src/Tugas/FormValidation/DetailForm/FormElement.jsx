@@ -69,16 +69,16 @@ export default class FormElement extends React.Component {
       Email: ${this.state.email}
       Password: ${this.state.password}
       `);
-      this.setState({
-        name: '',
-        phonenumber: '',
-        email: '',
-        password: '',
-        nameError: '',
-        emailError: '',
-        passwordError: '',
-        phonenumberError: '',
-      });
+      this.setState(
+        {
+          nameError: '',
+          emailError: '',
+          passwordError: '',
+          phonenumberError: '',
+        },
+        () => console.log('Click recorded!')
+      );
+      this.formDini.reset();
     }
   };
 
@@ -94,14 +94,14 @@ export default class FormElement extends React.Component {
         <h4 style={{ textAlign: 'center' }}>Form Registration</h4>
         <div style={{ fontSize: 14, color: 'red' }}>*Wajib diisi</div>
         <br />
-        <form onSubmit={this.handleSubmit}>
-          <Input type="text" name="nama" label="Name" onChange={(value) => this.setState({ name: value })} value={this.state.name} />
+        <form ref={(el) => (this.formDini = el)} onSubmit={this.handleSubmit}>
+          <Input type="text" name="nama" label="Name" onChange={(value) => this.setState({ name: value })} />
           <div style={{ fontSize: 14, color: 'red' }}>*{this.state.nameError}</div>
-          <Input type="text" name="phonenumber" label="Phone Number" onChange={(value) => this.setState({ phonenumber: value })} value={this.state.phonenumber} />
+          <Input type="text" name="phonenumber" label="Phone Number" onChange={(value) => this.setState({ phonenumber: value })} />
           <div style={{ fontSize: 14, color: 'red' }}>*{this.state.phonenumberError}</div>
-          <Input type="email" name="email" label="Email" onChange={(value) => this.setState({ email: value })} value={this.state.email} />
+          <Input type="email" name="email" label="Email" onChange={(value) => this.setState({ email: value })} />
           <div style={{ fontSize: 14, color: 'red' }}>*{this.state.emailError}</div>
-          <Input type="password" name="password" label="Password" onChange={(value) => this.setState({ password: value })} value={this.state.password} />
+          <Input type="password" name="password" label="Password" onChange={(value) => this.setState({ password: value })} />
           <div style={{ fontSize: 14, color: 'red' }}>*{this.state.passwordError}</div>
           <br />
           <button type="submit">Login</button>
