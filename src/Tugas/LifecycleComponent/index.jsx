@@ -32,21 +32,24 @@ export default class NewsApp extends React.Component {
       });
   }
 
+  handleChange = (e) => {
+    this.setState({ keyword: e.target.value });
+  };
+
   handleClick = (e) => {
     e.preventDefault();
-    this.setState({ keyword: e.target.value });
     this.setState({ isLoading: true });
     fetch(`https://newsapi.org/v2/everything?q=${this.state.keyword}&apiKey=${this.apiKey}`)
       .then((response) => {
         response.json();
         console.log(response);
       })
-      .then((response) => {
+      .then((data) => {
         this.setState({
-          news: [...response.articles],
+          news: [...data.articles],
           isLoading: false,
         });
-        console.log(response.articles);
+        console.log(this.state.news);
       });
   };
 
@@ -61,7 +64,7 @@ export default class NewsApp extends React.Component {
     return (
       <div>
         <NavbarNews />
-        <SearchNews handleClick={this.handleClick} />
+        <SearchNews handleClick={this.handleClick} handleChange={this.handleChange} />
         {this.state.isLoading ? (
           <div style={style}>
             <RotatingLines />
