@@ -11,7 +11,7 @@ export default class SearchNews extends React.Component {
           <Col className md={12}>
             <InputGroup className="mb-3">
               <FormControl placeholder="Search News..." aria-label="Recipient's username" aria-describedby="basic-addon2" />
-              <Button variant="success" id="button-addon2">
+              <Button onClick={this.props.handleClick} variant="success" id="button-addon2">
                 Search
               </Button>
             </InputGroup>

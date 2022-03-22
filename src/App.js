@@ -42,12 +42,12 @@
 
 // export default App;
 
-import FormValidation from './Tugas/FormValidation';
+import NewsApp from './Tugas/LifecycleComponent';
 
 function App() {
   return (
     <div className="App">
-      <FormValidation />
+      <NewsApp />
     </div>
   );
 }
