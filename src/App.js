@@ -42,12 +42,12 @@
 
 // export default App;
 
-import NewsApp from './Tugas/LifecycleComponent';
+import Redux from './Tugas/Redux';
 
 function App() {
   return (
     <div className="App">
-      <NewsApp />
+      <Redux />
     </div>
   );
 }
