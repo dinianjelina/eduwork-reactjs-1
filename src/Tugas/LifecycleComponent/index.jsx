@@ -18,7 +18,6 @@ export default class NewsApp extends React.Component {
 
   componentDidMount() {
     this.setState({ isLoading: true });
-    console.log(this.state.isLoading);
     console.log('DID MOUNT');
     // fetch(`https://newsapi.org/v2/everything?q=apple&from=2022-02-21&to=2022-02-21&sortBy=popularity&apiKey=22e72310a32345d880bdb3dd23b552d9`)
     fetch(`https://newsapi.org/v2/everything?q=apple&apiKey=b01d83cd9d034bc08c4e57514065a82b`)
@@ -28,7 +27,6 @@ export default class NewsApp extends React.Component {
           news: response.articles,
           isLoading: false,
         });
-        console.log(this.state.news);
       });
   }
 
@@ -40,13 +38,10 @@ export default class NewsApp extends React.Component {
     e.preventDefault();
     this.setState({ isLoading: true });
     fetch(`https://newsapi.org/v2/everything?q=${this.state.keyword}&apiKey=${this.apiKey}`)
+      .then((response) => response.json())
       .then((response) => {
-        response.json();
-        console.log(response);
-      })
-      .then((data) => {
         this.setState({
-          news: [...data.articles],
+          news: [...response.articles],
           isLoading: false,
         });
         console.log(this.state.news);
